@@ -1,23 +1,45 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <headerMenu></headerMenu>
+    <transition name="view">
+      <router-view/>
+    </transition>
+    <MyFooter></MyFooter>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'App'
-}
-</script>
-
+<style lang="scss" src="./assets/sass/global.scss"></style>
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans JP",'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+a{
+  text-decoration: none;
+}
+.view-enter-active,.view-leave-active{
+  transition: opacity 0.5s;
+}
+.view-leave-active{
+  position: absolute;
+}
+.view-enter,.view-leave-to{
+  opacity: 0;
 }
 </style>
+
+<script>
+
+import MyFooter from '@/components/MyFotter'
+import headerMenu from '@/components/headerMenu'
+
+export default {
+  name: 'App',
+  components: {
+    MyFooter,headerMenu
+  }
+}
+</script>
