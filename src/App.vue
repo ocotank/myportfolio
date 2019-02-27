@@ -39,7 +39,8 @@ import headerMenu from '@/components/headerMenu'
 export default {
   name: 'App',
   components: {
-    MyFooter,headerMenu
+    MyFooter,
+    headerMenu
   }
 }
 </script>

@@ -15,12 +15,12 @@
 <script>
 export default {
   name: 'headerMenu',
-  data(){
+  data () {
     return {
       list: [
-        { title: 'TOP', path: '/'},
-        { title: 'PROFILE', path: '/profile'},
-        { title: 'WORKS', path: '/works'}
+        {title: 'TOP', path: '/'},
+        {title: 'PROFILE', path: '/profile'},
+        {title: 'WORKS', path: '/works'}
       ]
     }
   }
