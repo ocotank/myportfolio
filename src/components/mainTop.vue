@@ -26,6 +26,3 @@ export default {
   name: 'mainTop'
 }
 </script>
-
-
-
