@@ -1,9 +1,10 @@
 <template>
-  <div id="mainTop">
-    <div>
+  <section>
+    <div id="mainTop">
       <p>Okada<br>Asako</p>
     </div>
-  </div>
+  <profileBlock></profileBlock>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -22,7 +23,12 @@
 </style>
 
 <script>
+import profileBlock from '@/components/profileBlock'
+
 export default {
-  name: 'mainTop'
+  name: 'mainTop',
+  components: {
+    profileBlock
+  }
 }
 </script>

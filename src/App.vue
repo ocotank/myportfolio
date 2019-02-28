@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="my-portfolio">
     <headerMenu></headerMenu>
     <transition name="view">
       <router-view/>
@@ -24,7 +24,8 @@ a{
   transition: opacity 0.5s;
 }
 .view-leave-active{
-  position: absolute;
+  /* position: absolute; */
+  display: none;
 }
 .view-enter,.view-leave-to{
   opacity: 0;
