@@ -1,21 +1,28 @@
 <template>
   <div id="app" class="my-portfolio">
     <headerMenu></headerMenu>
-    <transition name="view">
-      <router-view/>
-    </transition>
+    <div class="my-portfolio__inner">
+      <transition name="view">
+        <router-view/>
+      </transition>
+    </div>
     <MyFooter></MyFooter>
   </div>
 </template>
 
 <style lang="scss" src="./assets/sass/global.scss"></style>
-<style>
+<style lang="scss" scoped>
 #app {
   font-family: "Noto Sans JP",'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.my-portfolio{
+  &__inner{
+    padding-top: 10%;
+  }
 }
 a{
   text-decoration: none;
