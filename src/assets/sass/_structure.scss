@@ -1,3 +1,7 @@
+body{
+  font-family: 'Playfair Display','Noto Sans JP', sans-serif,'meiryo',;
+  background: #77b699;
+}
 img{
   max-width: 100%;
 }
@@ -5,7 +9,11 @@ figure{
   margin: 0;
 }
 .my-portfolio{
+  &__inner{
+    margin-bottom: 60px;
+  }
   &__title{
     color: rgb(119, 182, 153);
+    font-size: 26px;
   }
 }

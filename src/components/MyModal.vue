@@ -2,6 +2,7 @@
 <template>
   <transition name="modal" appear>
     <div class="modal modal-overlay" @click.self="$emit('close')">
+        <button @click="$emit('close')" class="close-button"></button>
       <div class="modal-window">
         <div class="modal-block">
           <div class="modal-block__item modal-content">
@@ -15,29 +16,33 @@
             </slot>
           </div>
         </div>
-        <!-- <footer class="modal-footer">
-          <slot name="footer">
-          </slot>
-        </footer> -->
-      <button @click="$emit('close')">Close</button>
       </div>
     </div>
   </transition>
 </template>
 
 <style lang="scss" scoped>
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
 .modal {
   &.modal-overlay {
     display: flex;
     align-items: center;
-    justify-content: cdenter;
+    justify-content: center;
     position: fixed;
     z-index: 30;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(119, 182, 153);
+    // background: rgba(0, 0, 0, 0.5);
   }
   &-window {
     background: #fff;
@@ -51,9 +56,41 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
     &__item{
       flex: 0 1 50%;
       max-width: 50%;
+    }
+  }
+  .close-button{
+    position: absolute;
+    transition: 0.5s;
+    top: 5%;
+    &:hover{
+      transform: rotate(90deg);
+      transition: 0.5s;
+    }
+    &::before{
+      content: '\f057';
+      color: #fff;
+      font-family: 'Font Awesome 5 Free';
+      display: inline-block;
+      font-weight: 400;
+      font-size: 40px;
+    }
+  }
+  @media(max-width: 414px){
+    &-window{
+      width: 80%;
+    }
+    .close-button{
+      top: 15%;
+    }
+    .modal-block{
+      display: block;
+      &__item{
+        max-width: 100%;
+      }
     }
   }
 }
