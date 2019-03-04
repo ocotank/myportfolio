@@ -2,8 +2,11 @@
   <section id="profile_block" class="profile_block">
     <div>
       <h2 class="my-portfolio__title">PROFILE</h2>
-      <div>
-        <ul class="profile_block__list">
+      <div class="profile_block__wrap">
+        <figure class="item">
+          <img src="../assets/img/img_profile .png" alt="">
+        </figure>
+        <ul class="profile_block__list item">
           <li v-for="(items, index) in mylist" :key="index">{{ items.title }}{{ items.block }}</li>
         </ul>
       </div>
@@ -13,10 +16,28 @@
 
 <style lang="scss" scoped>
   .profile_block{
-    max-width: 960px;
+    max-width: 600px;
     margin: auto;
     font-size: 12px;
     padding: 20px;
+    &__wrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .item:nth-child(1){
+        flex: 0 1 20%;
+        max-width: 20%;
+        padding-right: 10px;
+        box-sizing: border-box;
+        img{
+          width: 100px;
+        }
+      }
+      .item:nth-child(2){
+        flex: 0 1 80%;
+        max-width: 80%;
+      }
+    }
     &__list{
       text-align: left;
     }

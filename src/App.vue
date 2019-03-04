@@ -6,6 +6,7 @@
         <router-view/>
       </transition>
     </div>
+    <Contact></Contact>
     <MyFooter></MyFooter>
   </div>
 </template>
@@ -13,25 +14,20 @@
 <style lang="scss" src="./assets/sass/global.scss"></style>
 <style lang="scss" scoped>
 #app {
-  font-family: "Noto Sans JP",'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-.my-portfolio{
-  &__inner{
-    padding-top: 10%;
-  }
+  background: #fff;
 }
 a{
   text-decoration: none;
 }
 .view-enter-active,.view-leave-active{
-  transition: opacity 0.5s;
+  transition: opacity 1s;
 }
 .view-leave-active{
-  /* position: absolute; */
+  // position: absolute;
   display: none;
 }
 .view-enter,.view-leave-to{
@@ -43,12 +39,14 @@ a{
 
 import MyFooter from '@/components/MyFotter'
 import headerMenu from '@/components/headerMenu'
+import Contact from '@/components/ContactBlock'
 
 export default {
   name: 'App',
   components: {
     MyFooter,
-    headerMenu
+    headerMenu,
+    Contact
   }
 }
 </script>
