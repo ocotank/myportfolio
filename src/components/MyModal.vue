@@ -2,8 +2,8 @@
 <template>
   <transition name="modal" appear>
     <div class="modal modal-overlay" @click.self="$emit('close')">
-        <button @click="$emit('close')" class="close-button"></button>
       <div class="modal-window">
+        <button @click="$emit('close')" class="close-button"></button>
         <div class="modal-block">
           <div class="modal-block__item modal-content">
             <slot name="figureimg"></slot>
@@ -50,6 +50,8 @@ button{
     overflow: hidden;
     padding: 20px;
     width: 90%;
+    box-sizing: border-box;
+    position: relative;
   }
   .modal-block{
     display: flex;
@@ -64,14 +66,15 @@ button{
   .close-button{
     position: absolute;
     transition: 0.5s;
-    top: 5%;
+    top: 2%;
+    right: 2%;
     &:hover{
       transform: rotate(90deg);
       transition: 0.5s;
     }
     &::before{
       content: '\f057';
-      color: #fff;
+      color: #ccc;
       font-family: 'Font Awesome 5 Free';
       display: inline-block;
       font-weight: 400;
@@ -80,15 +83,17 @@ button{
   }
   @media(max-width: 414px){
     &-window{
-      width: 80%;
-    }
-    .close-button{
-      top: 15%;
+      padding: 40px;
     }
     .modal-block{
       display: block;
       &__item{
         max-width: 100%;
+      }
+    }
+    .close-button{
+      &::before{
+        font-size: 30px;
       }
     }
   }
