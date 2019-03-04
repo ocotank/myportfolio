@@ -48,7 +48,6 @@ button{
     background: #fff;
     border-radius: 4px;
     overflow: hidden;
-    margin: auto;
     padding: 20px;
     width: 90%;
   }
