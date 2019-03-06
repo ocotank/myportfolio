@@ -6,8 +6,8 @@
         <button @click="$emit('close')" class="close-button"></button>
         <div class="modal-block">
           <div class="modal-block__item modal-content">
-            <slot name="figureimg"></slot>
-            <slot/>
+            <slot name="figureimg">
+            </slot>
           </div>
           <div class="modal-block__item">
             <slot name="textblock">
