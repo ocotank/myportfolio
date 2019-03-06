@@ -67,7 +67,7 @@
       <MyModal @close="modal = false" v-if="modal == '1'" :key="1">
         <!-- default スロットコンテンツ -->
         <figure slot="figureimg" class="modal-img">
-          <img src="../assets/img/img_comzodance.png" alt="">
+          <a href="//www.itscom.net/comzodance/" target="_blank"><img src="../assets/img/img_comzodance.png" alt=""><figcaption class="modal-img__caption"><p class="caption-text">GO TO PAGE...</p></figcaption></a>
         </figure>
         <div slot="textblock">
           <h3 slot="work-title">コムゾーダンス</h3>
@@ -89,7 +89,12 @@
       <MyModal @close="modal = false" v-else-if="modal == '3'" :key="3">
         <!-- default スロットコンテンツ -->
         <figure slot="figureimg" class="modal-img">
-          <img src="../assets/img/img_18summer.png" alt="">
+          <a href="//www.cts.ne.jp/special/18summer/" target="_blank">
+            <img src="../assets/img/img_18summer.png" alt="">
+            <figcaption class="modal-img__caption">
+              <p class="caption-text">GO TO PAGE...</p>
+            </figcaption>
+          </a>
         </figure>
         <div slot="textblock">
           <h3 slot="work-title">暑中見舞いLP</h3>
@@ -100,7 +105,12 @@
       <MyModal @close="modal = false" v-else-if="modal == '4'" :key="4">
         <!-- default スロットコンテンツ -->
         <figure slot="figureimg" class="modal-img">
-          <img src="../assets/img/kbc.png" alt="">
+          <a href="//www.itscom.net/contents/maegumi/contents/kbc/" target="_blank">
+            <img src="../assets/img/kbc.png" alt="">
+            <figcaption class="modal-img__caption">
+              <p class="caption-text">GO TO PAGE...</p>
+            </figcaption>
+          </a>
         </figure>
         <div slot="textblock">
           <h3 slot="work-title">KBC 学童保育 ものがたり</h3>
@@ -111,7 +121,12 @@
       <MyModal @close="modal = false" v-else-if="modal == '5'" :key="5">
         <!-- default スロットコンテンツ -->
         <figure slot="figureimg" class="modal-img">
-          <img src="../assets/img/img_19newyear.png" alt="">
+          <a href="//www.itscom.net/special/19newyear/" target="_blank">
+            <img src="../assets/img/img_19newyear.png" alt="">
+            <figcaption class="modal-img__caption">
+              <p class="caption-text">GO TO PAGE...</p>
+            </figcaption>
+          </a>
         </figure>
         <div slot="textblock">
           <h3 slot="work-title">あけましておめでとう2019 LP</h3>
@@ -122,7 +137,12 @@
       <MyModal @close="modal = false" v-else-if="modal == '6'" :key="6">
         <!-- default スロットコンテンツ -->
         <figure slot="figureimg" class="modal-img">
-          <img src="../assets/img/img_itscom_18baseball.jpg" alt="">
+          <a href="//www.itscom.net/special/18baseball/" target="_blank">
+            <img src="../assets/img/img_itscom_18baseball.jpg" alt="">
+            <figcaption class="modal-img__caption">
+              <p class="caption-text">GO TO PAGE...</p>
+            </figcaption>
+          </a>
         </figure>
         <div slot="textblock">
           <h3 slot="work-title">夏の高校野球 2019 LP</h3>
@@ -133,7 +153,12 @@
       <MyModal @close="modal = false" v-else-if="modal == '7'" :key="7">
         <!-- default スロットコンテンツ -->
         <figure slot="figureimg" class="modal-img">
-          <img src="../assets/img/img_futakorice.png" alt="">
+          <a href="//www.itscom.net/special/futakorice/" target="_blank">
+            <img src="../assets/img/img_futakorice.png" alt="">
+            <figcaption class="modal-img__caption">
+              <p class="caption-text">GO TO PAGE...</p>
+            </figcaption>
+          </a>
         </figure>
         <div slot="textblock">
           <h3 slot="work-title">二子玉川らいす 2019 LP</h3>
@@ -212,6 +237,32 @@
 .modal-img{
   overflow: hidden;
   max-height: 500px;
+  position: relative;
+  &__caption{
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    .caption-text{
+      color: #fff;
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 90%;
+      height: 6%;
+      margin: auto;
+    }
+    &:hover{
+      opacity: 1;
+    }
+  }
   @media(max-width: 414px){
     max-height: 300px;
     margin-bottom: 20px;
