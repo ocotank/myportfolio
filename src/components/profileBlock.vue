@@ -4,7 +4,7 @@
       <h2 class="my-portfolio__title">PROFILE</h2>
       <div class="profile_block__wrap">
         <figure class="item">
-          <img src="../assets/img/img_profile .png" alt="">
+          <img src="../assets/img/img_profile.png" alt="">
         </figure>
         <ul class="profile_block__list item">
           <li v-for="(items, index) in mylist" :key="index">{{ items.title }}{{ items.block }}</li>

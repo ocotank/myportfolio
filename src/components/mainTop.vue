@@ -6,7 +6,7 @@
           <p v-for="(t, index) in text" :key="index" v-text="t" id="mainTitle" class="item delay-anime"></p>
         </div>
         <div class="title-block__item">
-          <img src="../assets/img/img_mytop .png" alt="">
+          <img src="../assets/img/img_mytop.png" alt="">
         </div>
       </div>
     </div>
